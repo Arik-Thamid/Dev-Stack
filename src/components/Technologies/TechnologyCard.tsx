@@ -38,7 +38,7 @@ const TechnologyCard = ({ data, stackData, setStackData,}: allDataType) => {
     toast.success(`${data.name} added to your stack!`)
   }
 
-  console.log(stackData)
+
 
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
