@@ -14,7 +14,6 @@ A modern web application for exploring developer technologies and building your 
 - TypeScript
 - Tailwind CSS
 - React Toastify
-- React Icon
 - JSON
 - Vite
 
@@ -22,7 +21,7 @@ A modern web application for exploring developer technologies and building your 
 
 Dev Stack helps developers explore different technologies and create a personalized technology stack.
 
-## ⚛️ React Questions
+##  React Questions
 
 ### 1. What is JSX, and why is it used in React?
 

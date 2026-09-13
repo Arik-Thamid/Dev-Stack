@@ -104,7 +104,7 @@ const TechnologyCard = ({ data, stackData, setStackData,}: allDataType) => {
       <button
         onClick={buttonHandler}
         
-        className={`${isSelected?'bg-gray-400 hover:bg-gray-300':'bg-slate-950 hover:bg-slate-800'} mt-2 w-full cursor-pointer rounded-md  py-1.5 text-[8px] font-medium text-white transition `}
+        className={`${isSelected?'bg-gray-400 ':'bg-slate-950 hover:bg-slate-800'} mt-2 w-full cursor-pointer rounded-md  py-1.5 text-[8px] font-medium text-white transition `}
       >
         {isSelected ? <div className="flex justify-center items-center"><span className="text-[12px]"><IoMdCheckmark /></span>Added to Stack</div>: "Add to Stack"}
       </button>
