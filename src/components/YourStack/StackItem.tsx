@@ -14,21 +14,21 @@ const StackItem = ({ stackData , setStackData}: stackDataType) => {
   const deleteHandler =(name:string)=>{
     const newData = stackData.filter(data => data.name !== name)
     setStackData(newData)
-    toast.success(`${name} removed from your stack!`)
+    toast.info(`${name} removed from your stack!`)
   }
 
   // remove all
   const removeAll =()=>{
     setStackData([])
-    toast.success('All technologies removed')
+    toast.info('All technologies removed')
   }
 
   return (
     <>
-      <section className="rounded-[20px] border border-slate-200 bg-white p-4 shadow-sm">
+      <section className="rounded-[20px]  border border-slate-200 bg-white p-4 shadow-sm">
 
         {/* Header */}
-        <h2 className="text-[23px] font-bold leading-tight text-[#0F172A]">
+        <h2 className="text-[20px] font-bold leading-tight text-[#0F172A]">
           Your Stack
         </h2>
 
@@ -46,7 +46,7 @@ const StackItem = ({ stackData , setStackData}: stackDataType) => {
 
         {/* Empty State */}
         {stackData.length === 0 && (
-          <div className="mt-5 flex h-25 items-center justify-center rounded-[14px] border border-dashed border-[#DCE5F0]">
+          <div className="mt-4 flex h-15 items-center justify-center rounded-xl border border-dashed border-[#DCE5F0]">
             <p className="text-[14px] text-[#94A3B8]">
               Your stack is empty
             </p>

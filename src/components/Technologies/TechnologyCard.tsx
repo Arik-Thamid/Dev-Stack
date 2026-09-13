@@ -29,19 +29,27 @@ const TechnologyCard = ({ data, stackData, setStackData,}: allDataType) => {
   const isSelected = stackData.some(
     (item) => item.name === data.name
   )
-
+  
+ 
 
   const buttonHandler = () => {
-    if(isSelected) return
+   if (isSelected) {
+    toast.warning(`${data.name} is already added!`)
+    return
+  }
     setStackData([...stackData, data])
-
+    
     toast.success(`${data.name} added to your stack!`)
   }
 
 
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+    <div className={`rounded-xl border bg-white p-3 shadow-sm ${
+        isSelected
+          ? "border border-fuchsia-500"
+          : "border-slate-200"
+      }`}>
 
       {/* Top */}
       <div className="flex items-start justify-between">
@@ -95,8 +103,8 @@ const TechnologyCard = ({ data, stackData, setStackData,}: allDataType) => {
       {/* Button */}
       <button
         onClick={buttonHandler}
-        disabled={isSelected}
-        className="mt-2 w-full cursor-pointer rounded-md bg-slate-950 py-1.5 text-[8px] font-medium text-white transition hover:bg-slate-800 disabled:cursor-default disabled:border-gray-300 disabled:bg-gray-300 disabled:text-gray-500 disabled:hover:bg-gray-300 disabled:hover:text-gray-500 disabled:hover:shadow-none"
+        
+        className={`${isSelected?'bg-gray-400 hover:bg-gray-300':'bg-slate-950 hover:bg-slate-800'} mt-2 w-full cursor-pointer rounded-md  py-1.5 text-[8px] font-medium text-white transition `}
       >
         {isSelected ? <div className="flex justify-center items-center"><span className="text-[12px]"><IoMdCheckmark /></span>Added to Stack</div>: "Add to Stack"}
       </button>

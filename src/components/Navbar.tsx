@@ -7,9 +7,9 @@ const Navbar = () => {
      <div className="container mx-auto">
         <div className="flex justify-between items-center py-4">
 
-        <img src={Logo} alt="logo" />
+        <img className="w-28 md:w-auto" src={Logo} alt="logo" />
 
-        <ul className="flex items-center gap-7 text-sm">
+        <ul className="hidden md:flex items-center gap-7 text-sm">
             <li><a className="text-pink-500" href="#">Home</a></li>
             <li><a href="#">Technologies</a></li>
             <li><a href="#">Projects</a></li>
@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
             <button className="text-sm">Sign In</button>
 
-            <button className="bg-[#D91B7E] text-[#FFFFFF] text-sm px-5 py-2 rounded-full">
+            <button className="bg-[#D91B7E] text-[#FFFFFF] text-xs md:text-sm px-3 md:px-5 py-2 rounded-full">
             Sign Up
             </button>
         </div>
